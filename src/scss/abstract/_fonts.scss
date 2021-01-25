@@ -1,20 +1,55 @@
+// @font-face {
+//   font-family: Ogg Roman;
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(../../css/fonts/display.ttf);
+// }
+
+// @font-face {
+//   font-family: Visuelt Pro;
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(../../css/fonts/print-regular.ttf);
+// }
+
+// @font-face {
+//   font-family: Visuelt Pro;
+//   font-style: normal;
+//   font-weight: 900;
+//   src: url(../../css/fonts/print-black.ttf);
+// }
 @font-face {
-  font-family: Ogg;
-  font-style: normal;
-  font-weight: 400;
-  src: url(../../css/fonts/display.ttf);
+    font-family: 'Visuelt Pro';
+    src: url('../../css/fonts/VisueltPro-Black.woff2') format('woff2'),
+        url('../../css/fonts/VisueltPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: Visuelt Pro;
-  font-style: normal;
-  font-weight: 400;
-  src: url(../../css/fonts/print-regular.ttf);
+    font-family: 'Visuelt Pro';
+    src: url('../../css/fonts/VisueltPro-Bold.woff2') format('woff2'),
+        url('../../css/fonts/VisueltPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: Visuelt Pro;
-  font-style: normal;
-  font-weight: 900;
-  src: url(../../css/fonts/print-black.ttf);
+    font-family: 'Ogg';
+    src: url('../../css/fonts/Ogg-Roman.woff2') format('woff2'),
+        url('../../css/fonts/Ogg-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Visuelt Pro';
+    src: url('../../css/fonts/VisueltPro-Regular.woff2') format('woff2'),
+        url('../../css/fonts/VisueltPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
