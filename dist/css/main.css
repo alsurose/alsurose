@@ -324,10 +324,10 @@ footer {
   margin-right: 1rem;
   margin: auto; }
   .about__skill span {
-    font-family: 'Visuelt Pro Black';
+    font-family: "Visuelt Pro", sans-serif;
     font-weight: 900; }
   .about__skill:nth-of-type(2n+4), .about__skill:nth-of-type(3n) {
-    font-family: 'Visuelt Pro Black';
+    font-family: "Visuelt Pro", sans-serif;
     font-weight: 900; }
   .about__skill:nth-of-type(4n) {
     font-family: "Ogg", serif;

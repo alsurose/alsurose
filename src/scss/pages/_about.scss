@@ -39,14 +39,12 @@
       // font-size: 2.2rem;
     }
     span {
-      // font-family: $font--print;
-      font-family: 'Visuelt Pro Black';
+      font-family: $font--print;
       font-weight: 900;
     }
     &:nth-of-type(2n+4),
     &:nth-of-type(3n) {
-      // font-family: $font--print;
-      font-family: 'Visuelt Pro Black';
+      font-family: $font--print;
       font-weight: 900;
     }
     &:nth-of-type(4n) {
