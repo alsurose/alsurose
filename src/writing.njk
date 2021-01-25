@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+---
+<header class="site-header container">
+  <div class="logo">
+    <a class="logo__link" href="/"> ← return to home</a>
+    <img src="../img/logo.png" alt="site's logo" class="logo__img">
+  </div>
+  {% include 'components/nav.njk' %}
+</header>
+
+<article class="page page--writing writing">
+  <div class="container">
+    <h1 class="page__title page__title--center">writing</h1>
+    {# <img src="../img/logo.png" alt="site's logo" class="logo__img"> #}
+  </div>
+
+  <section class="writing__tags-sum">
+    <div class="container">
+      <h2 class="header header--before">tags</h2>
+    </div>
+    <div class="writing__tags-container full-bleed">
+      <span class="writing__tag-sum">typography</span>
+      <span class="writing__tag-sum">react</span>
+      <span class="writing__tag-sum">svg</span>
+      <span class="writing__tag-sum">tutorial</span>
+      <span class="writing__tag-sum">personal</span>
+      <span class="writing__tag-sum">react</span>
+      <span class="writing__tag-sum">tutorial</span>
+    </div>
+    <div class="container">
+      <h2 class="header header--before header--after">posts</h2>
+    </div>
+  </section>
+
+  <section class="writing__items">
+    <div class="container">
+      <ul class="writing__list full-bleed">
+      {% set writings = [
+          {
+            title: 'How to convert variable TTF to font files',
+            date: 'dec 20',
+            cat: 'typography',
+            img: 'https://images.ctfassets.net/0ggmebtirnb6/cEKTM7Bjqfyp9mPDD62cH/c47a345ba9c2ff5d1875098c6d1a3dee/pawel-czerwinski-oNJuXlz-uX0-unsplash.jpg?w=500'
+          },
+          {
+            title: 'How to convert variable TTF to font files',
+            date: 'dec 20',
+            cat: 'react',
+            img: 'https://images.ctfassets.net/0ggmebtirnb6/3DQb8RMavXWfR17dAA4Go2/8bcd4c7a90ba78c25a09ca2cf7280889/philipp-kammerer-dD4-_LkdXvU-unsplash.jpg?w=500'
+          },
+          {
+            title: 'How to convert variable TTF to font files',
+            date: 'dec 20',
+            cat: 'journal',
+            img: 'https://images.ctfassets.net/0ggmebtirnb6/2zbEQp5xWy6RkW3JCctFfC/ca1ff4efc576491ad2c3079cd1a45b4d/kitchen.jpg?w=500'
+          }
+        ] 
+      %}
+      {% for writing in writings %}
+        {% include 'components/writing-list-item.njk' %}
+      {% endfor %}
+      </ul>
+    </div>
+    
+
+    </div>
+  </section>
+</article>

@@ -1,0 +1,10 @@
+---
+tags: work
+layout: layouts/base.njk
+---
+
+{%- for work in collections.work -%}
+  <h2>{{ work.data.title }}</h2>
+{%- endfor -%}
+
+<h1>{{work.name}} hi</h1>

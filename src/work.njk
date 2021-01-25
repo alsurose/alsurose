@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+
+<header class="site-header container">
+  <div class="logo">
+    <a class="logo__link" href="/"> ← return to home</a>
+    <img src="../img/logo.png" alt="site's logo" class="logo__img">
+  </div>
+  {% include 'components/nav.njk' %}
+</header>
+
+<article class="page page--work">
+  <div class="container">
+    <section class="works">
+      <h1 class="page__title page__title--center">portfolio work</span></h1>
+      <div class="container">
+        <h2 class="header header--before header--after">work</h2>
+      </div>
+      <ul class="work">
+        {% set works = [
+          {link: 'http://exo.quebec', title: 'exo rem'},
+          {link: 'http://facet.ai', title: 'facet AI'},
+          {link: 'http://rrrad.ca', title: 'rad agency'},
+          {link: 'http://tdaeroplan.com', title: 'TD Aeroplan'},
+          {link: 'http://dairygoodness.ca/milk-in-school/new-brunswick-nova-scotia', title: 'School Milk'}
+        ] %}
+        {% for work in works %}
+          {% include 'components/work-list-item.njk' %}
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</article>
+
+{# {% include 'components/footer.njk' %} #}

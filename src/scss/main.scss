@@ -1,0 +1,44 @@
+@import 'abstract/variables';
+@import 'abstract/mixins';
+@import 'abstract/typography';
+
+@import 'layout/base';
+
+@import 'components/nav';
+@import 'components/nav-logo';
+@import 'components/intro';
+@import 'components/writing-item';
+
+@import 'pages/about';
+@import 'pages/work';
+@import 'pages/contact';
+@import 'pages/writing';
+@import 'pages/post';
+
+
+body {
+  background-color: var(--color--light-bg);
+  color: var(--color--light-copy);
+  font-family: $font--print;
+  font-size: 16px;
+}
+
+h1,h2,h3,h4 {
+  font-weight: normal;
+}
+
+
+
+.cta {
+  text-align: center;
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+  &__header {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: $font--display;
+    text-decoration: none;
+    color: inherit;    
+  }
+}

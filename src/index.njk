@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+---
+{% set nav = {isLeft: true} %}
+
+<div class="container">
+  {% include 'components/intro.njk' %}
+</div>
+{{ contentful }}
+<section>
+  <div class="container">
+    <h2 class="header header--after">Work</h2>
+    <ul class="work">
+    {% set works = [
+        {link: 'http://exo.quebec', title: 'exo rem'},
+        {link: 'http://facet.ai', title: 'facet AI'},
+        {link: 'http://rrrad.ca', title: 'rad agency'},
+        {link: 'http://tdaeroplan.com', title: 'TD Aeroplan'},
+        {link: 'http://dairygoodness.ca/milk-in-school/new-brunswick-nova-scotia', title: 'School Milk'}
+      ] 
+    %}
+    {% for work in works %}
+      {% include 'components/work-list-item.njk' %}
+    {% endfor %}
+
+    </ul>
+  </div>
+</section>
+
+{# {% include 'components/footer.njk' %} #}
+
+{# <section class="cta">
+  <h2 class="header header--before header--after">Info</h2>
+  <a class="cta__header" href="/about">about</a>
+</section>
+
+<section class="cta">
+  <h2 class="header header--before header--after">Little Blog</h2>
+  <a class="cta__header" href="/writing">writing</a>
+</section> #}

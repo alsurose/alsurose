@@ -1,0 +1,27 @@
+.header {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color--shadow);
+  display: grid;
+  grid-gap: 0.8rem;
+  justify-items: center;
+  &:before,
+  &:after {
+    background-color: currentColor;
+    height: 6rem;
+    width: 0.01rem;
+    display: block;
+  }
+  &--after {
+    &:after {
+      content: '';
+    }
+  }
+  &--before,
+  &--side {
+    &:before {
+      content: '';
+    }
+  }
+}

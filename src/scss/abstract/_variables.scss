@@ -1,0 +1,25 @@
+$font--display: 'Ogg', serif;
+$font--print: 'Visuelt Pro', sans-serif;
+
+$breakpoints: (
+  sm: 38rem,
+  md: 44rem,
+  lg: 55rem,
+  xl: 80rem
+);
+
+html {
+  --color--dark-copy: #EDE8E2;
+  --color--dark-bg: #37383A;
+  --color--dark-accent: #E4C9C0;
+
+  --color--light-copy: #111111;
+  --color--light-bg: #F0E6DD;
+  --color--light-accent: #1600C2; 
+
+  --color--shadow: #A6A6A6;
+
+  --color--grey-28: hsl(0, 0%, 28%);
+  --color--grey-36: hsl(0, 0%, 36%);
+  --color--grey-44: hsl(0, 0%, 44%);
+}
