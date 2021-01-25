@@ -18,38 +18,68 @@
 //   font-weight: 900;
 //   src: url(../../css/fonts/print-black.ttf);
 // }
+// @font-face {
+//     font-family: 'Visuelt Pro';
+//     src: url('../../css/fonts/VisueltPro-Black.woff2') format('woff2'),
+//         url('../../css/fonts/VisueltPro-Black.woff') format('woff');
+//     font-weight: 900;
+//     font-style: normal;
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: 'Visuelt Pro';
+//     src: url('../../css/fonts/VisueltPro-Bold.woff2') format('woff2'),
+//         url('../../css/fonts/VisueltPro-Bold.woff') format('woff');
+//     font-weight: bold;
+//     font-style: normal;
+//     font-display: swap;
+// }
+// @font-face {
+//     font-family: 'Visuelt Pro';
+//     src: url('../../css/fonts/VisueltPro-Regular.woff2') format('woff2'),
+//         url('../../css/fonts/VisueltPro-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+// @font-face {
+//     font-family: 'Ogg';
+//     src: url('../../css/fonts/Ogg-Roman.woff2') format('woff2'),
+//         url('../../css/fonts/Ogg-Roman.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
 @font-face {
     font-family: 'Visuelt Pro';
-    src: url('../../css/fonts/VisueltPro-Black.woff2') format('woff2'),
-        url('../../css/fonts/VisueltPro-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+    src: url('../../css/fonts/print-regular/print-regular.eot');
+    src: url('../../css/fonts/print-regular/print-regular.eot?#iefix') format('embedded-opentype'),
+         url('../../css/fonts/print-regular/print-regular.woff2') format('woff2'),
+         url('../../css/fonts/print-regular/print-regular.woff') format('woff'),
+         url('../../css/fonts/print-regular/print-regular.ttf')  format('truetype'),
+         url('../../css/fonts/print-regular/print-regular.svg#Visuelt Pro') format('svg');
+    font-weight: normal;
 }
 
 @font-face {
     font-family: 'Visuelt Pro';
-    src: url('../../css/fonts/VisueltPro-Bold.woff2') format('woff2'),
-        url('../../css/fonts/VisueltPro-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+    src: url('../../css/fonts/print-black/print-black.eot');
+    src: url('../../css/fonts/print-black/print-black.eot?#iefix') format('embedded-opentype'),
+         url('../../css/fonts/print-black/print-black.woff2') format('woff2'),
+         url('../../css/fonts/print-black/print-black.woff') format('woff'),
+         url('../../css/fonts/print-black/print-black.ttf')  format('truetype'),
+         url('../../css/fonts/print-black/print-black.svg#Visuelt Pro Black') format('svg');
+    font-weight: 900;
 }
+
 
 @font-face {
     font-family: 'Ogg';
-    src: url('../../css/fonts/Ogg-Roman.woff2') format('woff2'),
-        url('../../css/fonts/Ogg-Roman.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Visuelt Pro';
-    src: url('../../css/fonts/VisueltPro-Regular.woff2') format('woff2'),
-        url('../../css/fonts/VisueltPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    src: url('../../css/fonts/print-display/display.eot');
+    src: url('../../css/fonts/print-display/display.eot?#iefix') format('embedded-opentype'),
+         url('../../css/fonts/print-display/display.woff2') format('woff2'),
+         url('../../css/fonts/print-display/display.woff') format('woff'),
+         url('../../css/fonts/print-display/display.ttf')  format('truetype'),
+         url('../../css/fonts/print-display/display.svg#Ogg') format('svg');
 }
