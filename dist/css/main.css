@@ -700,6 +700,9 @@ footer {
       height: 100%;
       grid-column: 1 / 9; } }
 
+html {
+  background-color: var(--color--light-bg); }
+
 body {
   background-color: var(--color--light-bg);
   color: var(--color--light-copy);

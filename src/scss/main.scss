@@ -15,7 +15,9 @@
 @import 'pages/writing';
 @import 'pages/post';
 
-
+html {
+  background-color: var(--color--light-bg);
+}
 body {
   background-color: var(--color--light-bg);
   color: var(--color--light-copy);
