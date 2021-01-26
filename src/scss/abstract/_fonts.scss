@@ -73,25 +73,24 @@
     font-weight: 900;
 }
 
-
-// @font-face {
-//     font-family: 'Ogg';
-//     src: url('../../css/fonts/print-display/display.eot');
-//     src: url('../../css/fonts/print-display/display.eot?#iefix') format('embedded-opentype'),
-//          url('../../css/fonts/print-display/display.woff2') format('woff2'),
-//          url('../../css/fonts/print-display/display.woff') format('woff'),
-//          url('../../css/fonts/print-display/display.ttf')  format('truetype'),
-//          url('../../css/fonts/print-display/display.svg#Ogg') format('svg');
-// }
 @font-face {
     font-family: 'Ogg';
-    src: url('../../css/fonts/OggTRIAL-Regular.eot');
-    src: url('../../css/fonts/OggTRIAL-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../../css/fonts/OggTRIAL-Regular.woff2') format('woff2'),
-        url('../../css/fonts/OggTRIAL-Regular.woff') format('woff'),
-        url('../../css/fonts/OggTRIAL-Regular.ttf') format('truetype'),
-        url('../../css/fonts/OggTRIAL-Regular.svg#OggTRIAL-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    src: url('../../css/fonts/print-display/display.eot');
+    src: url('../../css/fonts/print-display/display.eot?#iefix') format('embedded-opentype'),
+         url('../../css/fonts/print-display/display.woff2') format('woff2'),
+         url('../../css/fonts/print-display/display.woff') format('woff'),
+         url('../../css/fonts/print-display/display.ttf')  format('truetype'),
+         url('../../css/fonts/print-display/display.svg#Ogg') format('svg');
 }
+// @font-face {
+//     font-family: 'Ogg';
+//     src: url('../../css/fonts/OggTRIAL-Regular.eot');
+//     src: url('../../css/fonts/OggTRIAL-Regular.eot?#iefix') format('embedded-opentype'),
+//         url('../../css/fonts/OggTRIAL-Regular.woff2') format('woff2'),
+//         url('../../css/fonts/OggTRIAL-Regular.woff') format('woff'),
+//         url('../../css/fonts/OggTRIAL-Regular.ttf') format('truetype'),
+//         url('../../css/fonts/OggTRIAL-Regular.svg#OggTRIAL-Regular') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
