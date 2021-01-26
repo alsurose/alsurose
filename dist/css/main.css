@@ -40,11 +40,14 @@ html {
     background-color: currentColor;
     height: 6rem;
     width: 0.01rem;
+    width: 0.5px;
     display: block; }
   .header--after:after {
-    content: ''; }
+    content: '';
+    margin-bottom: 0.5rem; }
   .header--before:before, .header--side:before {
-    content: ''; }
+    content: '';
+    margin-top: 0.5rem; }
 
 main {
   padding-top: 2rem;
