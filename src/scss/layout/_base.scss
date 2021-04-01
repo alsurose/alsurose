@@ -1,8 +1,27 @@
+.texture {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url(../../img/bg--marble-light.jpg);
+  // background-image: url(../../img/bg--marble-dark.jpg);
+  // background-image: url(../../img/bg--metal-light.jpg);
+  // background-image: url(../../img/bg--metal-dark.jpg);
+  background-size: cover;
+  opacity: 0.08;
+  z-index: 2;
+  width: 110vw;
+  height: 100%;
+  mix-blend-mode: multiply;
+  pointer-events: none
+}
+
 main {
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0 auto;
-  // border: red solid 1px;
+  // border: red solid 2px;
   @include screen(md) {
     max-width: 50rem;
   }

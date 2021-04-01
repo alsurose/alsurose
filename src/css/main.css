@@ -49,6 +49,21 @@ html {
     content: '';
     margin-top: 0.5rem; }
 
+.texture {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url(../../img/bg--marble-light.jpg);
+  background-size: cover;
+  opacity: 0.08;
+  z-index: 2;
+  width: 110vw;
+  height: 100%;
+  mix-blend-mode: multiply;
+  pointer-events: none; }
+
 main {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -724,7 +739,6 @@ html {
   background-color: var(--color--light-bg); }
 
 body {
-  background-color: var(--color--light-bg);
   color: var(--color--light-copy);
   font-family: "Visuelt Pro", sans-serif;
   font-size: 16px;
