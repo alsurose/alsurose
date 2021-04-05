@@ -1,21 +1,50 @@
-var month = new Array();
+const booking = () => {
+  const month = new Array();
 
-month[0] = "January";
-month[1] = "February";
-month[2] = "March";
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-month[7] = "August";
-month[8] = "September";
-month[9] = "October";
-month[10] = "November";
-month[11] = "December";
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
 
-var d = new Date();
-document.write("org month: " + d.getMonth() + '       ');
-var n = month[d.getMonth() + 2];
-// document.write("current: " + n );
+  const time = new Date();
+  let m = time.getMonth();
+  let y = time.getFullYear();
+  let mFinal = 0;
+  // const d = time.getDate();
 
-d.getMonth() > 9 ? d.getMonth() = 0 : document.write("   current: " + n);
+  let message = '';
+
+  const overOctober = () => {
+    m = m - 10;
+    mFinal = month[m];
+    // y++;
+    // console.log("case1 -- month:" + mFinal.slice(0, 3), 'year:' + y);
+    return message = `${mFinal.slice(0, 3)} ${y++}`;
+  }
+
+  const normalMonth = () => {
+    mFinal = month[m + 2];
+    // console.log("case3 -- month:" + mFinal.slice(0, 3), 'year:' + y);
+    return message = `${mFinal.slice(0, 3)} ${y}`;
+  }
+  
+  const book = m >= 9 ? overOctober() : normalMonth();
+  // const text = document.getElementById('booking');
+  // text.text(booking);
+  console.log(book);
+  return book;
+}
+
+// booking();
+const text = document.getElementById('booking').innerHTML = booking();
+// console.log(text);
+
+// text.innerHTML(booking);
