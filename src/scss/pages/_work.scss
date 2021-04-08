@@ -28,6 +28,10 @@
         // border: 1px solid green;
         grid-column: 4 / end;
       }
+      &:nth-of-type(5n) {
+        // border: 1px solid green;
+        grid-column: 2 / end;
+      }
     }
     
   }
@@ -37,7 +41,7 @@
     text-transform: uppercase;
     margin: 0;
     @include screen(md) {
-      font-size: 3rem;
+      font-size: 4rem;
     }
   }
   &__link {
