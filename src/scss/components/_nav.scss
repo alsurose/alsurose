@@ -15,12 +15,12 @@
   &__list-item {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 0.5rem;
+    // grid-gap: 0.5rem;
     justify-content: end;
     text-align: right;
     counter-increment: nav;
     &::before {
-      content: '0' counter(nav) '.';
+      content: '0' counter(nav) '_';
       justify-self: end;
     }
   }
@@ -38,7 +38,7 @@
       justify-content: unset;
       @include screen(md) {
         grid-template-columns: auto auto;
-        grid-gap: 0.5rem;
+        // grid-gap: 0.5rem;
         justify-content: end;
         text-align: right;
       }
