@@ -138,7 +138,7 @@ class RGBShiftEffect extends EffectShell {
     // compute image ratio
     let imageRatio =
       this.currentItem.img.naturalWidth / this.currentItem.img.naturalHeight
-    this.scale = new THREE.Vector3(imageRatio, 1, 1)
+    this.scale = new THREE.Vector3(imageRatio / 1.2, 0.88, 0.88)
     this.uniforms.uTexture.value = this.currentItem.texture
     this.plane.scale.copy(this.scale)
   }

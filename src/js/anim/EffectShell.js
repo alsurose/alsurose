@@ -121,8 +121,8 @@ class EffectShell {
 
   _onMouseMove(event) {
     // get normalized mouse position on viewport
-    this.mouse.x = (event.clientX / this.viewport.width) * 2 - 1
-    this.mouse.y = -(event.clientY / this.viewport.height) * 2 + 1
+    this.mouse.x = (event.clientX / this.viewport.width) * 2 - 0.8
+    this.mouse.y = -(event.clientY / this.viewport.height) * 1.5 + 0.2
 
     this.onMouseMove(event)
   }
@@ -172,12 +172,14 @@ class EffectShell {
 
   get itemsElements() {
     // convert NodeList to Array
-    const items = [...this.itemsWrapper.querySelectorAll('.link')]
+    const items = [...this.itemsWrapper.querySelectorAll('.work__item')]
+    // const items = [...this.itemsWrapper.querySelectorAll('.link')]
 
     //create Array of items including element, image and index
     return items.map((item, index) => ({
       element: item,
-      img: item.querySelector('img') || null,
+      img: item.querySelector('.work__img') || null,
+      // img: item.querySelector('img') || null,
       index: index
     }))
   }

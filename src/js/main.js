@@ -44,23 +44,27 @@ const booking = () => {
 }
 
 // booking();
-// const text = document.getElementById('booking').innerHTML = booking();
+const text = document.getElementById('booking').innerHTML = booking();
 // console.log(text);
 
 // text.innerHTML(booking);
 
 const container = document.body
-const itemsWrapper = document.querySelector('.grid')
+const itemsWrapper = document.querySelector('.work')
+// const itemsWrapper = document.querySelector('.grid')
 
 // Preload images
 const preloadImages = () => {
   return new Promise((resolve, reject) => {
-    imagesLoaded(document.querySelectorAll('img'), resolve);
+    imagesLoaded(document.querySelectorAll('.work__img'), resolve);
+    // imagesLoaded(document.querySelectorAll('img'), resolve);
   });
 };
 // And then..
 preloadImages().then(() => {
   // Remove the loader
   document.body.classList.remove('loading');
-  const effect = new RGBShiftEffect(container, itemsWrapper, { strength: 0.25 })
+  const effect = new RGBShiftEffect(container, itemsWrapper, { strength: 1 })
+  // const effect = new TrailsEffect(container, itemsWrapper)
+  // const effect = new StretchEffect(container, itemsWrapper)
 });

@@ -2,8 +2,12 @@
   @include screen(md) {
     display: grid;
     grid-column-gap: 1rem;
+    grid-row-gap: 1.5rem;
     grid-template-columns: repeat(10, 1fr);
     align-content: start;
+    // width: 100vw;
+    // height: 100vh;
+    // margin-top: 20rem !important;
   }
   &__list {
     padding-top: 5rem;
@@ -65,6 +69,13 @@
       bottom: 0;
     }
   }
+  &__img {
+    display: none;
+    max-width:130px;
+    // max-height:95px;
+    // width: 60%;
+    // height: 60%;
+  }
 }
 .works {
   display: grid;
@@ -74,4 +85,14 @@
     grid-row: unset;
     grid-column: unset;
   }
+}
+
+// for three.js
+canvas {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  pointer-events: none;
 }
