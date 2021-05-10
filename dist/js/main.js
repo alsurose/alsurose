@@ -39,12 +39,34 @@ const booking = () => {
   const book = m >= 9 ? overOctober() : normalMonth();
   // const text = document.getElementById('booking');
   // text.text(booking);
-  console.log(book);
+  // console.log(book);
   return book;
 }
 
 // booking();
-const text = document.getElementById('booking').innerHTML = booking();
+if (window.location.pathname === '/' || window.location.pathname === '/about/') {
+  document.getElementById('booking').innerHTML = booking();
+}
 // console.log(text);
 
 // text.innerHTML(booking);
+
+const container = document.body
+const itemsWrapper = document.querySelector('.work')
+// const itemsWrapper = document.querySelector('.grid')
+
+// Preload images
+const preloadImages = () => {
+  return new Promise((resolve, reject) => {
+    imagesLoaded(document.querySelectorAll('.work__img'), resolve);
+    // imagesLoaded(document.querySelectorAll('img'), resolve);
+  });
+};
+// And then..
+preloadImages().then(() => {
+  // Remove the loader
+  document.body.classList.remove('loading');
+  const effect = new RGBShiftEffect(container, itemsWrapper, { strength: 1 })
+  // const effect = new TrailsEffect(container, itemsWrapper)
+  // const effect = new StretchEffect(container, itemsWrapper)
+});
