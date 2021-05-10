@@ -57,53 +57,21 @@ title: Alsu - Contact | Developer & UX Designer
     <h2 class="header header--before header--after">form</h2>
   </div>
 
-  {# <section>
-    <form accept-charset="UTF-8" action="https://getform.io/f/b4b160f2-e01f-475c-afc8-2c253d009723" method="POST">
-      <input type="email" name="email" placeholder="Your Email">
-      <input type="text" name="name" placeholder="Your Name">
-      <input type="text" name="message" placeholder="Your Message">
-      <button type="submit">Send</button>
-    </form>
-  </section> #}
-
-  {# <section>
-    <form name="contact" method="POST" data-netlify="true">
-      <p>
-        <label>Your Name: <input type="text" name="name" /></label>   
-      </p>
-      <p>
-        <label>Your Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Your Role: <select name="role[]" multiple>
-          <option value="leader">Leader</option>
-          <option value="follower">Follower</option>
-        </select></label>
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
-  </section> #}
-
   <section>
     <div class="container">
       <form id="form" class="contact__form" action="" name="contact" method="POST" data-netlify="true" autocomplete="on">
         <fieldset class="contact__group">
           <legend class="contact__legend">first you</legend>
           <div class="contact__subgroup contact__subgroup--stacked">
-            <input class="contact__input" id="name" type="text" autocomplete="name">
+            <input class="contact__input" id="name" type="text" autocomplete="name" required>
             <label class="contact__label" for="name">name</label>
           </div>
           <div class="contact__subgroup contact__subgroup--stacked">
           <input class="contact__input" id="company" type="text" autocomplete="organization">
-          <label class="contact__label" for="company">company</label>
+          <label class="contact__label" for="company">company, if applicable</label>
           </div>
           <div class="contact__subgroup contact__subgroup--stacked">
-            <input class="contact__input" id="email" type="text" autocomplete="email">
+            <input class="contact__input" id="email" type="text" autocomplete="email" required>
             <label class="contact__label" for="email">email</label>
           </div>
           <div class="contact__subgroup contact__subgroup--stacked">
@@ -118,11 +86,11 @@ title: Alsu - Contact | Developer & UX Designer
             <p class="contact__label" id="description">Fill me in on the project. <br>Is there a deadline? <br>What are hoping to achieve with the new site? <br>Are you launching a new service/product? <br>Or are you looking to re-imagine an existing service/product? <br>As much info you can provide here is super valuable to me :)</p>
 
             {# <label for="description">Enter description</label> #}
-            <textarea class="contact__input contact__input--area" name="description" id="description" aria-labelledby="description" rows="10"></textarea>
+            <textarea class="contact__input contact__input--area" name="description" id="description" aria-labelledby="description" rows="10" required></textarea>
           </div>
         </fieldset>
 
-        <fieldset class="contact__group">
+        <fieldset class="contact__group" required>
           <legend class="contact__legend">features:</legend>
           <div class="contact__subgroup">
             <input class="contact__input" type="checkbox" name="features" id="blog">
@@ -146,7 +114,7 @@ title: Alsu - Contact | Developer & UX Designer
           </div>
         </fieldset>
 
-        <fieldset class="contact__group">
+        <fieldset class="contact__group" required>
           <legend class="contact__legend">budget</legend>
           <div class="contact__subgroup">
             <input class="contact__input" type="radio" value="7-10" name="budget" id="7-10">
@@ -166,7 +134,7 @@ title: Alsu - Contact | Developer & UX Designer
           </div>
         </fieldset>
 
-        <fieldset class="contact__group">
+        <fieldset class="contact__group" required>
           <legend class="contact__legend">timeline</legend>
           <div class="contact__subgroup">
             <input class="contact__input" type="radio" value="asap" name="timeline" id="asap">
