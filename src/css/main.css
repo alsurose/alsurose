@@ -152,11 +152,12 @@ footer {
   .nav__list-item {
     display: grid;
     grid-template-columns: auto auto;
+    grid-gap: 0.5rem;
     justify-content: end;
     text-align: right;
     counter-increment: nav; }
     .nav__list-item::before {
-      content: "0" counter(nav) "_";
+      content: "0" counter(nav) ".";
       justify-self: end; }
   .nav__link {
     text-decoration: none;

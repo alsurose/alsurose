@@ -44,7 +44,9 @@ const booking = () => {
 }
 
 // booking();
-const text = document.getElementById('booking').innerHTML = booking();
+if (window.location.pathname === '/' || window.location.pathname === '/about/') {
+  document.getElementById('booking').innerHTML = booking();
+}
 // console.log(text);
 
 // text.innerHTML(booking);
