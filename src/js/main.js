@@ -1,3 +1,4 @@
+// booking date
 const booking = () => {
   const month = new Array();
 
@@ -51,6 +52,60 @@ if (window.location.pathname === '/' || window.location.pathname === '/about/') 
 
 // text.innerHTML(booking);
 
+// form validation
+if (window.location.pathname === '/contact/') {
+  (function () {
+    console.log('context');
+    const form = document.querySelector('#form');
+    const checkboxes = form.querySelectorAll('input[type=checkbox]');
+    // const groups = form.querySelectorAll('.contact__group');
+    
+    // require all checkboxes
+    const requiredCheckboxes = Array.from(document.querySelectorAll('input[type=checkbox][required]'));
+    requiredCheckboxes.map(checkmark => {
+      checkmark.addEventListener('change', (function () {
+        if (checkmark.checked) {
+          checkmark.removeAttribute('required');
+        } else {
+          checkmark.setAttribute('required', 'required');
+        }
+      }));
+    })
+    
+
+    const checkboxLength = checkboxes.length;
+    const firstCheckbox = checkboxLength > 0 ? checkboxes[0] : null;
+
+    function init() {
+      if (firstCheckbox) {
+        for (let i = 0; i < checkboxLength; i++) {
+          checkboxes[i].addEventListener('change', checkValidity);
+        }
+
+        checkValidity();
+      }
+    }
+
+    function isChecked() {
+      for (let i = 0; i < checkboxLength; i++) {
+        if (checkboxes[i].checked) return true;
+      }
+
+      return false;
+    }
+
+    function checkValidity() {
+      const errorMessage = !isChecked() ? 'At least one checkbox must be selected.' : '';
+      firstCheckbox.setCustomValidity(errorMessage);
+    }
+
+    init();
+  })();
+}
+
+
+
+// work webgl
 const container = document.body
 const itemsWrapper = document.querySelector('.work')
 // const itemsWrapper = document.querySelector('.grid')
