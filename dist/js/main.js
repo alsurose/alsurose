@@ -54,53 +54,54 @@ if (window.location.pathname === '/' || window.location.pathname === '/about/') 
 
 // form validation
 if (window.location.pathname === '/contact/') {
-  (function () {
+  // (function () {
     console.log('context');
     const form = document.querySelector('#form');
     const checkboxes = form.querySelectorAll('input[type=checkbox]');
     // const groups = form.querySelectorAll('.contact__group');
     
     // require all checkboxes
-    const requiredCheckboxes = Array.from(document.querySelectorAll('input[type=checkbox][required]'));
-    requiredCheckboxes.map(checkmark => {
-      checkmark.addEventListener('change', (function () {
-        if (checkmark.checked) {
-          checkmark.removeAttribute('required');
-        } else {
-          checkmark.setAttribute('required', 'required');
-        }
-      }));
-    })
+    // const requiredCheckboxes = Array.from(document.querySelectorAll('input[type=checkbox][required]'));
+    // requiredCheckboxes.map(checkmark => {
+    //   console.log(checkmark)
+    //   checkmark.addEventListener('change', (function () {
+    //     if (checkmark.checked) {
+    //       checkmark.removeAttribute('required');
+    //     } else {
+    //       checkmark.setAttribute('required', 'required');
+    //     }
+    //   }));
+    // })
     
 
-    const checkboxLength = checkboxes.length;
-    const firstCheckbox = checkboxLength > 0 ? checkboxes[0] : null;
+    // const checkboxLength = checkboxes.length;
+    // const firstCheckbox = checkboxLength > 0 ? checkboxes[0] : null;
 
-    function init() {
-      if (firstCheckbox) {
-        for (let i = 0; i < checkboxLength; i++) {
-          checkboxes[i].addEventListener('change', checkValidity);
-        }
+    // function init() {
+    //   if (firstCheckbox) {
+    //     for (let i = 0; i < checkboxLength; i++) {
+    //       checkboxes[i].addEventListener('change', checkValidity);
+    //     }
 
-        checkValidity();
-      }
-    }
+    //     checkValidity();
+    //   }
+    // }
 
-    function isChecked() {
-      for (let i = 0; i < checkboxLength; i++) {
-        if (checkboxes[i].checked) return true;
-      }
+    // function isChecked() {
+    //   for (let i = 0; i < checkboxLength; i++) {
+    //     if (checkboxes[i].checked) return true;
+    //   }
 
-      return false;
-    }
+    //   return false;
+    // }
 
-    function checkValidity() {
-      const errorMessage = !isChecked() ? 'At least one checkbox must be selected.' : '';
-      firstCheckbox.setCustomValidity(errorMessage);
-    }
+    // function checkValidity() {
+    //   const errorMessage = !isChecked() ? 'At least one checkbox must be selected.' : '';
+    //   firstCheckbox.setCustomValidity(errorMessage);
+    // }
 
-    init();
-  })();
+    // init();
+  // })();
 }
 
 

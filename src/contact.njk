@@ -59,36 +59,36 @@ title: Alsu - Contact | Developer & UX Designer
 
   <section>
     <div class="container">
-      <form id="form" class="contact__form" action="" name="contact" method="POST" data-netlify="true" autocomplete="on">
+      <form id="form" class="contact__form" action="/test3" name="contact" method="POST" data-netlify="true" autocomplete="on">
         <fieldset class="contact__group">
           <legend class="contact__legend">first you</legend>
           <div class="contact__subgroup contact__subgroup--stacked">
             <input class="contact__input" id="name" type="text" autocomplete="name" required>
             <label class="contact__label" for="name">name</label>
           </div>
-          <div class="contact__subgroup contact__subgroup--stacked">
+          {# <div class="contact__subgroup contact__subgroup--stacked">
           <input class="contact__input" id="company" type="text" autocomplete="organization">
           <label class="contact__label" for="company">company, if applicable</label>
-          </div>
+          </div> #}
           <div class="contact__subgroup contact__subgroup--stacked">
             <input class="contact__input" id="email" type="text" autocomplete="email" required>
             <label class="contact__label" for="email">email</label>
           </div>
-          <div class="contact__subgroup contact__subgroup--stacked">
+          {# <div class="contact__subgroup contact__subgroup--stacked">
             <input class="contact__input" id="url" type="text" autocomplete="url">
             <label class="contact__label" for="url">website url, if exists</label>
-          </div>
+          </div> #}
         </fieldset>
 
-        <fieldset class="contact__group">
+        {# <fieldset class="contact__group">
           <legend class="contact__legend">now, let's talk about the project</legend>
           <div class="contact__subgroup contact__subgroup--stacked">
             <p class="contact__label" id="description">Fill me in on the project. <br>Is there a deadline? <br>What are hoping to achieve with the new site? <br>Are you launching a new service/product? <br>Or are you looking to re-imagine an existing service/product? <br>As much info you can provide here is super valuable to me :)</p>
 
-            {# <label for="description">Enter description</label> #}
+            <label for="description">Enter description</label>
             <textarea class="contact__input contact__input--area" name="description" id="description" aria-labelledby="description" rows="10" required></textarea>
           </div>
-        </fieldset>
+        </fieldset> #}
 
         <fieldset class="contact__group">
           <legend class="contact__legend">features:</legend>
@@ -114,7 +114,7 @@ title: Alsu - Contact | Developer & UX Designer
           </div>
         </fieldset>
 
-        <fieldset class="contact__group" required>
+        {# <fieldset class="contact__group" required>
           <legend class="contact__legend">budget</legend>
           <div class="contact__subgroup">
             <input class="contact__input" type="radio" value="7-10" name="budget" id="7-10">
@@ -152,7 +152,7 @@ title: Alsu - Contact | Developer & UX Designer
             <input class="contact__input" type="radio" value="unsure" name="timeline" id="unsure">
             <label class="contact__label" for="unsure">unsure</label>
           </div>
-        </fieldset>
+        </fieldset> #}
         <input class="contact__input contact__input--submit" type="submit" value="SUBMIT">
       </form>
     </div>
