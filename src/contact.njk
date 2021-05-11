@@ -59,7 +59,7 @@ title: Alsu - Contact | Developer & UX Designer
 
   <section>
     <div class="container">
-      <form id="form" class="contact__form" action="/test3" name="contact" method="POST" data-netlify="true" autocomplete="on">
+      <form id="form" class="contact__form" action="/success/" name="contact" method="POST" data-netlify="true" autocomplete="on">
         <fieldset class="contact__group">
           <legend class="contact__legend">first you</legend>
           <div class="contact__subgroup contact__subgroup--stacked">
@@ -80,7 +80,7 @@ title: Alsu - Contact | Developer & UX Designer
           </div> #}
         </fieldset>
 
-        {# <fieldset class="contact__group">
+        <fieldset class="contact__group">
           <legend class="contact__legend">now, let's talk about the project</legend>
           <div class="contact__subgroup contact__subgroup--stacked">
             <p class="contact__label" id="description">Fill me in on the project. <br>Is there a deadline? <br>What are hoping to achieve with the new site? <br>Are you launching a new service/product? <br>Or are you looking to re-imagine an existing service/product? <br>As much info you can provide here is super valuable to me :)</p>
@@ -88,36 +88,36 @@ title: Alsu - Contact | Developer & UX Designer
             <label for="description">Enter description</label>
             <textarea class="contact__input contact__input--area" name="description" id="description" aria-labelledby="description" rows="10" required></textarea>
           </div>
-        </fieldset> #}
+        </fieldset>
 
-        <fieldset class="contact__group">
-          <legend class="contact__legend">features:</legend>
+        <fieldset class="contact__group required">
+          <legend class="contact__legend">features</legend>
           <div class="contact__subgroup">
-            <input class="contact__input" type="checkbox" required name="features" id="blog">
+            <input class="contact__input" type="checkbox" name="features" id="blog">
             <label class="contact__label" for="blog">blog</label>
           </div>
           <div class="contact__subgroup">
-            <input class="contact__input" type="checkbox" required name="features" id="portfolio">
+            <input class="contact__input" type="checkbox" name="features" id="portfolio">
             <label class="contact__label" for="portfolio">portfolio/ project showcasing/ filter feature</label>
           </div>
           <div class="contact__subgroup">
-            <input class="contact__input" type="checkbox" required name="features" id="membership">
+            <input class="contact__input" type="checkbox" name="features" id="membership">
             <label class="contact__label" for="membership">membership features</label>
           </div>
           <div class="contact__subgroup">
-            <input class="contact__input" type="checkbox" required name="features" id="ecommerce">
+            <input class="contact__input" type="checkbox" name="features" id="ecommerce">
             <label class="contact__label" for="ecommerce">ecommerce features (payment processing/ online store)</label>
           </div>
           <div class="contact__subgroup">
-            <input class="contact__input" type="checkbox" required name="features" id="multilingual">
+            <input class="contact__input" type="checkbox" name="features" id="multilingual">
             <label class="contact__label" for="multilingual">multilingual functionality</label>
           </div>
         </fieldset>
 
-        {# <fieldset class="contact__group" required>
+        <fieldset class="contact__group">
           <legend class="contact__legend">budget</legend>
           <div class="contact__subgroup">
-            <input class="contact__input" type="radio" value="7-10" name="budget" id="7-10">
+            <input class="contact__input" type="radio" value="7-10" name="budget" id="7-10" required>
             <label class="contact__label" for="7-10">$7,000-$10,000</label>
           </div>
           <div class="contact__subgroup">
@@ -134,10 +134,10 @@ title: Alsu - Contact | Developer & UX Designer
           </div>
         </fieldset>
 
-        <fieldset class="contact__group" required>
+        <fieldset class="contact__group">
           <legend class="contact__legend">timeline</legend>
           <div class="contact__subgroup">
-            <input class="contact__input" type="radio" value="asap" name="timeline" id="asap">
+            <input class="contact__input" type="radio" value="asap" name="timeline" id="asap" required>
             <label class="contact__label" for="asap">ASAP</label>
           </div>
           <div class="contact__subgroup">
@@ -152,7 +152,7 @@ title: Alsu - Contact | Developer & UX Designer
             <input class="contact__input" type="radio" value="unsure" name="timeline" id="unsure">
             <label class="contact__label" for="unsure">unsure</label>
           </div>
-        </fieldset> #}
+        </fieldset>
         <input class="contact__input contact__input--submit" type="submit" value="SUBMIT">
       </form>
     </div>

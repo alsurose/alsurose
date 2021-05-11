@@ -62,10 +62,10 @@
   }
   &__subgroup {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 0 auto 1fr;
     margin-bottom: 1rem;
     align-items: baseline;
-    grid-gap: 0.5rem;
+    // grid-gap: 0.5rem;
     &--stacked {
       grid-template-columns: 1fr;
       grid-gap: 0.2rem;
@@ -121,8 +121,9 @@
     &[type="checkbox"]:checked,
     &[type="radio"]:not(:checked),
     &[type="radio"]:checked {
-      position: absolute;
-      left: -9999px;
+      // position: absolute;
+      // left: -9999px;
+      opacity: 0;
     }
     &[type="checkbox"]:not(:checked) + label,
     &[type="checkbox"]:checked + label,

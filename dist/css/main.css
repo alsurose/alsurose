@@ -508,10 +508,9 @@ canvas {
 
 .contact__subgroup {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 0 auto 1fr;
   margin-bottom: 1rem;
-  align-items: baseline;
-  grid-gap: 0.5rem; }
+  align-items: baseline; }
   .contact__subgroup--stacked {
     grid-template-columns: 1fr;
     grid-gap: 0.2rem; }
@@ -558,8 +557,7 @@ canvas {
     .contact__input:focus ~ label {
       color: var(--color--light-accent); }
   .contact__input[type="checkbox"]:not(:checked), .contact__input[type="checkbox"]:checked, .contact__input[type="radio"]:not(:checked), .contact__input[type="radio"]:checked {
-    position: absolute;
-    left: -9999px; }
+    opacity: 0; }
   .contact__input[type="checkbox"]:not(:checked) + label,
   .contact__input[type="checkbox"]:checked + label,
   .contact__input[type="radio"]:not(:checked) + label,
