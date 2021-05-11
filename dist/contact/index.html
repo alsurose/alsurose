@@ -64,7 +64,6 @@
     <p>If you like emails, simply <a class="contact__link" href="mailto:heyalsu@gmail.com">reach out at heyalsu@gmail.com</a> with information similar to the one the form asks for.</p>
     <p>If you need my resume, <a class="contact__link" target="_blank" href="/cv/Alsu_Kurbanova_CV.pdf">check it out here</a>.</p>
     <p>If you are looking for me on the internet, @alsukurr is where I’m at for most places.</p>
-
     </div>
   </section>
 
@@ -100,20 +99,25 @@
             <input class="contact__input" id="name" type="text" autocomplete="name" required>
             <label class="contact__label" for="name">name</label>
           </div>
-          
+          <div class="contact__subgroup contact__subgroup--stacked">
+          <input class="contact__input" id="company" type="text" autocomplete="organization">
+          <label class="contact__label" for="company">company, if applicable</label>
+          </div>
           <div class="contact__subgroup contact__subgroup--stacked">
             <input class="contact__input" id="email" type="text" autocomplete="email" required>
             <label class="contact__label" for="email">email</label>
           </div>
-          
+          <div class="contact__subgroup contact__subgroup--stacked">
+            <input class="contact__input" id="url" type="text" autocomplete="url">
+            <label class="contact__label" for="url">website url, if exists</label>
+          </div>
         </fieldset>
 
         <fieldset class="contact__group">
           <legend class="contact__legend">now, let's talk about the project</legend>
           <div class="contact__subgroup contact__subgroup--stacked">
             <p class="contact__label" id="description">Fill me in on the project. <br>Is there a deadline? <br>What are hoping to achieve with the new site? <br>Are you launching a new service/product? <br>Or are you looking to re-imagine an existing service/product? <br>As much info you can provide here is super valuable to me :)</p>
-
-            <label for="description">Enter description</label>
+            
             <textarea class="contact__input contact__input--area" name="description" id="description" aria-labelledby="description" rows="10" required></textarea>
           </div>
         </fieldset>
