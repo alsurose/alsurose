@@ -1,4 +1,7 @@
 .contact {
+  &__hidden {
+    display: none;
+  }
   &__intro,
   &__form,
   .container--header {

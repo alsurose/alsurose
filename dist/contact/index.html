@@ -92,7 +92,10 @@
 
   <section>
     <div class="container">
-      <form id="form" class="contact__form" action="/success/" name="contact" method="POST" data-netlify="true" autocomplete="on">
+      <form id="form" class="contact__form" action="/success/" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" autocomplete="on">
+        <p class="contact__hidden">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
         <fieldset class="contact__group">
           <legend class="contact__legend">first you</legend>
           <div class="contact__subgroup contact__subgroup--stacked">
@@ -211,6 +214,7 @@
             </label>
           </div>
         </fieldset>
+        <div data-netlify-recaptcha="true"></div>
         <input class="contact__input contact__input--submit" type="submit" value="SUBMIT">
       </form>
     </div>

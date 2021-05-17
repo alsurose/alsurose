@@ -452,6 +452,9 @@ canvas {
   z-index: -1;
   pointer-events: none; }
 
+.contact__hidden {
+  display: none; }
+
 @media screen and (min-width: 44rem) {
   .contact__intro, .contact__form,
   .contact .container--header {
