@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my rosy self</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    background: #222;
+    overflow: hidden;
+  }
+
+  .wrapper {
+    display: inline-block;
+    position: relative;
+    line-height: .8;
+    font-size: 20vw;
+    letter-spacing: -10px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 85px 0;
+    margin: 0 0 250px 0;
+    position: absolute;
+    font-family: 'Space Grotesk', sans-serif;
+    /* font-weight: bold; */
+  }
+
+  .template {
+    color: white;
+    opacity: 0;
+  }
+
+  .slice {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    animation: scale 4s infinite;
+    transition: all .1s;
+    transform-origin: bottom right;
+  }
+
+  .slice.oposite {
+    right: 0;
+    left: auto;
+    animation: scale-opposite 4s infinite;
+    transition: all .1s;
+  }
+
+  .slice.oposite .mask {
+    right: 0;
+    left: auto;
+  }
+
+  .mask {
+    position: absolute;
+    overflow: hidden;
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale3d(1, 1, 1)
+    }
+
+    25% {
+      transform: scale3d(0, 1, 1)
+    }
+
+    50% {
+      transform: scale3d(1, 1, 1)
+    }
+  }
+
+  @keyframes scale-opposite {
+    0% {
+      transform: scale3d(0, 1, 1)
+    }
+
+    25% {
+      transform: scale3d(1, 1, 0)
+    }
+
+    50% {
+      transform: scale3d(0, 1, 1)
+    }
+
+    80% {
+      transform: scale3d(0, 1, 1)
+    }
+
+    100% {
+      transform: scale3d(0, 1, 1)
+    }
+  }
+
+
+  /* not related to the animation */
+
+  .plug {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+  }
+
+  .plug:after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    content: '';
+    height: 1px;
+    width: 10%;
+    transition: width .3s;
+  }
+
+  .plug:hover:after {
+    width: 100%
+  }
+</style>
+
+<body>
+  <a class='plug' target='_blank'></a>
+  <!-- life is about living and happiness can be part of it, but it -->
+</body>
+<script>
+  makeWord('not my', 10)
+  makeWord('rosy self', 10, '#bb0a27', 0, 'oposite')
+
+  function makeWord(word, slices, color = 'white', offset = 2, className = 'null') {
+
+    const wrapper = document.createElement('div')
+    wrapper.classList.add('wrapper')
+    document.body.appendChild(wrapper)
+
+    const template = document.createElement('div')
+    template.classList.add('template')
+    template.textContent = word
+    wrapper.appendChild(template)
+
+    const sliceArray = [];
+
+    while (sliceArray.length < slices) {
+      const slice = document.createElement('div')
+      slice.classList.add(`slice`);
+      slice.classList.add(`slice-${sliceArray.length}`);
+      slice.classList.add(className)
+      slice.style.color = color
+      slice.style.animationDelay = .1 * sliceArray.length + offset + 's'
+      const mask = document.createElement('div')
+      mask.classList.add(`mask`);
+      mask.style.height = 100 / slices + '%'
+      mask.style.top = sliceArray.length / slices * 100 + '%'
+      slice.appendChild(mask)
+      const content = document.createElement('div')
+      content.classList.add(`content`);
+      content.textContent = word
+      content.style.transform = `translate3d(0, -${sliceArray.length / slices * 100 + '%'}, 0)`
+      mask.appendChild(content)
+      wrapper.appendChild(slice)
+      sliceArray.push(slice)
+    }
+  }
+</script>
+
+</html>
