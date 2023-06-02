@@ -61,6 +61,7 @@ footer {
       }
     span {
       display: block;
+      margin-left: 60px;
       @include screen(md) {
         display: inline-block;
       }
