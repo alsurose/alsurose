@@ -118,10 +118,6 @@ footer {
   display: block;
   margin-left: 60px;
 }
-.page__title span::before {
-  content: "-";
-  display: block;
-}
 @media screen and (min-width: 44rem) {
   .page__title span {
     display: inline-block;

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently 'eleventy --serve' 'gulp buildStyles'",
+    "dev": "concurrently 'eleventy --serve' 'gulp sass:watch'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
