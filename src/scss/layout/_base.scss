@@ -63,6 +63,7 @@ footer {
       display: block;
       // margin-left: 60px;
       @include screen(md) {
+        margin-left: 0;
         display: inline-block;
       }
     }
