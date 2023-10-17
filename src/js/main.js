@@ -37,7 +37,7 @@ const booking = () => {
     return message = `${mFinal.slice(0, 3)} ${y}`;
   }
   
-  const book = m >= 9 ? overOctober() : normalMonth();
+  const book = m >= 11 ? overOctober() : normalMonth();
   // const text = document.getElementById('booking');
   // text.text(booking);
   // console.log(book);
