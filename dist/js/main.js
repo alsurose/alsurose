@@ -32,12 +32,12 @@ const booking = () => {
   }
 
   const normalMonth = () => {
-    mFinal = month[m + 2];
+    mFinal = month[m + 1];
     // console.log("case3 -- month:" + mFinal.slice(0, 3), 'year:' + y);
     return message = `${mFinal.slice(0, 3)} ${y}`;
   }
   
-  const book = m >= 11 ? overOctober() : normalMonth();
+  const book = m >= 10 ? overOctober() : normalMonth();
   // const text = document.getElementById('booking');
   // text.text(booking);
   // console.log(book);
