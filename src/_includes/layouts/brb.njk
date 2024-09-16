@@ -12,36 +12,69 @@
     <link rel="stylesheet" href="{{ '/css/reset.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
     {% include 'snippets/gtag.njk' %}
+    <style>
+      #countdown {
+        display: grid;
+        grid-template-columns: repeat(8, auto);
+      }
+    </style>
   </head>
   <body>
     <div class="texture"></div>
     <main>
-      {# <div class="container">
-        {% include 'components/intro.njk' %}
-      </div> #}
-      {# <h2 class="header header--after">brb</h2> #}
-      <h1>site under maintenance</h1>
-      {# <h2><br>love, alsu</h2>
-      <h6>16.06.2022<br>athens greece</h6> #}
-
+      <div class="container">
+        {% include 'components/intro_brb.njk' %}
+      </div>
     </main>
 
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
-  <!-- {# <script src="{{ '/js/anim/three.min.js' }}"></script>
-  <script src="{{ '/js/anim/TweenLite.min.js' }}"></script>
-	<script src="{{ '/js/anim/Math.js' }}"></script>
-	<script src="{{ '/js/anim/EffectShell.js' }}"></script>
-	<script src="{{ '/js/anim/RGBShiftEffect.js' }}"></script>
-	<script src="{{ '/js/anim/imagesloaded.pkgd.min.js' }}"></script> #}
+  <script>
+    (function () {
+        const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
 
-  {# <script src="{{ '/js/anim/three.min.js' }}"></script>
-  <script src="{{ '/js/anim/TweenLite.min.js' }}"></script>
-  <script src="{{ '/js/anim/Math.js' }}"></script>
-  <script src="{{ '/js/anim/EffectShell.js' }}"></script>
-  <script src="{{ '/js/anim/TrailsEffect.js' }}"></script>
-	<script src="{{ '/js/anim/imagesloaded.pkgd.min.js' }}"></script> #} -->
+        //I'm adding this section so I don't have to keep updating this pen every year :-)
+        //remove this if you don't need it
+        let today = new Date(),
+          dd = String(today.getDate()).padStart(2, "0"),
+          mm = String(today.getMonth() + 1).padStart(2, "0"),
+          yyyy = today.getFullYear(),
+          nextYear = yyyy + 1,
+          dayMonth = "10/16/",
+          birthday = dayMonth + yyyy;
+
+        today = mm + "/" + dd + "/" + yyyy;
+        if (today > birthday) {
+          birthday = dayMonth + nextYear;
+        }
+        //end
+
+        const countDown = new Date(birthday).getTime(),
+          x = setInterval(function () {
+
+            const now = new Date().getTime(),
+              distance = countDown - now;
+
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+            //do something later when date is reached
+            if (distance < 0) {
+              document.getElementById("headline").innerText = "yeeee finish line";
+              document.getElementById("countdown").style.display = "none";
+              document.getElementById("content").style.display = "block";
+              clearInterval(x);
+            }
+            //seconds
+          }, 0)
+      }());
+  </script>
 
   <script src="{{ '/js/anim/three.min.js' }}"></script>
   <script src="{{ '/js/anim/TweenLite.min.js' }}"></script>
