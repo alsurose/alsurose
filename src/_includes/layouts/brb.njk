@@ -14,8 +14,12 @@
     {% include 'snippets/gtag.njk' %}
     <style>
       #countdown {
+        margin-top: 20px;
         display: grid;
-        grid-template-columns: repeat(8, auto);
+        grid-template-columns: 1fr;
+      }
+      #countdown span span {
+        display: inline;
       }
     </style>
   </head>
