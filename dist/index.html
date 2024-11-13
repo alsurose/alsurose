@@ -20,84 +20,91 @@
 
   gtag('config', 'UA-142408554-1');
 </script>
-    <style>
-      #countdown {
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-      #countdown span span {
-        display: inline;
-      }
-    </style>
   </head>
   <body>
     <div class="texture"></div>
     <main>
-      <div class="container">
-        <header class="intro">
-    <h1 class="intro__title">COMING SOON</h1>
+
+<div class="container">
+  <header class="intro">
+    <h1 class="intro__title">Alsu</h1>
     <p class="intro__subtitle">
-      <span>it's been too long lfg <br></span>
-      <span id="countdown">
-        <span><span id="days"></span>days</span>
-        <span><span id="hours"></span>hrs</span>
-        <span><span id="minutes"></span>mins</span>
-        <span><span id="seconds"></span>secs</span>
-      </span>
+      <span>creative technologist</span>
+      <span>available for freelance:</span>
+      <span>booking for <span id="booking"></span></span>
     </p>
+
+    <nav class="nav  nav--left ">
+  <ul class="nav__list">
+    <li class="nav__list-item">
+      <a class="nav__link" href="/work">Work</a>
+    </li>
+    <li class="nav__list-item">
+      <a class="nav__link" href="/play">play</a>
+    </li>
+    <li class="nav__list-item">
+      <a class="nav__link" href="/about">About</a>
+    </li>
+    <li class="nav__list-item">
+      <a class="nav__link" href="/contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
 </header>
-      </div>
-    </main>
+</div>
+<span></span>
+<section>
+  <div class="container">
+    <h2 class="header header--after">Work</h2>
+    <ul class="work">
+    
+    
+       <li class="work__item">
+  <p class="work__title">exo rem</p>
+  <a class="work__link" target="_blank" href='http://exo.quebec/rem'>Go to work ↗</a>
+  <img class="work__img" src='/img/work/img_1--new.jpg' alt="">
+</li>
+    
+       <li class="work__item">
+  <p class="work__title">facet AI</p>
+  <a class="work__link" target="_blank" href='http://facet.ai'>Go to work ↗</a>
+  <img class="work__img" src='/img/work/img_2--new.jpg' alt="">
+</li>
+    
+       <li class="work__item">
+  <p class="work__title">rad agency</p>
+  <a class="work__link" target="_blank" href='http://rrrad.ca'>Go to work ↗</a>
+  <img class="work__img" src='/img/work/img_3--neww.jpg' alt="">
+</li>
+    
+       <li class="work__item">
+  <p class="work__title">TD Aeroplan</p>
+  <a class="work__link" target="_blank" href='http://tdaeroplan.com'>Go to work ↗</a>
+  <img class="work__img" src='/img/work/img_4--new.jpg' alt="">
+</li>
+    
+       <li class="work__item">
+  <p class="work__title">School Milk</p>
+  <a class="work__link" target="_blank" href='http://dairygoodness.ca/milk-in-school/new-brunswick-nova-scotia'>Go to work ↗</a>
+  <img class="work__img" src='/img/work/img_5--new.jpg' alt="">
+</li>
+    
+
+    </ul>
+  </div>
+</section>
+
+
+
+</main>
 
 
     <!-- Current page: / -->
   </body>
-  <script>
-    (function () {
-        const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
+  <!-- 
 
-        //I'm adding this section so I don't have to keep updating this pen every year :-)
-        //remove this if you don't need it
-        let today = new Date(),
-          dd = String(today.getDate()).padStart(2, "0"),
-          mm = String(today.getMonth() + 1).padStart(2, "0"),
-          yyyy = today.getFullYear(),
-          nextYear = yyyy + 1,
-          dayMonth = "10/16/",
-          birthday = dayMonth + yyyy;
-
-        today = mm + "/" + dd + "/" + yyyy;
-        if (today > birthday) {
-          birthday = dayMonth + nextYear;
-        }
-        //end
-
-        const countDown = new Date(birthday).getTime(),
-          x = setInterval(function () {
-
-            const now = new Date().getTime(),
-              distance = countDown - now;
-
-            document.getElementById("days").innerText = Math.floor(distance / (day)),
-              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-            //do something later when date is reached
-            if (distance < 0) {
-              document.getElementById("headline").innerText = "yeeee finish line";
-              document.getElementById("countdown").style.display = "none";
-              document.getElementById("content").style.display = "block";
-              clearInterval(x);
-            }
-            //seconds
-          }, 0)
-      }());
-  </script>
+   -->
 
   <script src="/js/anim/three.min.js"></script>
   <script src="/js/anim/TweenLite.min.js"></script>
