@@ -119,6 +119,7 @@ footer {
 }
 @media screen and (min-width: 44rem) {
   .page__title span {
+    margin-left: 0;
     display: inline-block;
   }
 }
